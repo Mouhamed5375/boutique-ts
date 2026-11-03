@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boutique-ts</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <header>
+      <h1>Ma mini-boutique</h1>
+    </header>
+
+    <main>
+      <!-- Recherche et filtre -->
+      <section id="filtres">
+        <input type="search" id="recherche" placeholder="Rechercher un produit..." />
+
+        <select id="categorie">
+          <option value="toutes">Toutes les catégories</option>
+          <option value="vetements">Vêtements</option>
+          <option value="chaussures">Chaussures</option>
+          <option value="accessoires">Accessoires</option>
+          <option value="maison">Maison</option>
+        </select>
+      </section>
+
+      <!-- Le catalogue : rempli par main.ts -->
+      <section>
+        <h2>Catalogue</h2>
+        <div id="catalogue"></div>
+      </section>
+
+      <!-- Un formulaire pour s'entraîner (sections 9.3 et 9.4) -->
+      <section>
+        <h2>Commande rapide</h2>
+        <form id="commande">
+          <label for="prix">Prix unitaire (F CFA)</label>
+          <input type="number" id="prix" name="prix" value="25000" />
+
+          <label for="quantite">Quantité</label>
+          <input type="number" id="quantite" name="quantite" value="1" min="1" />
+
+          <button type="submit">Valider la commande</button>
+        </form>
+        <button type="button" id="ajouter">Ajouter au panier</button>
+      </section>
+
+      <!-- Le panier : rempli par main.ts -->
+      <section>
+        <h2>Panier</h2>
+        <ul id="panier"></ul>
+        <p>Total : <strong id="total">0 F CFA</strong></p>
+      </section>
+    </main>  
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
